@@ -1,0 +1,558 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: xs-advance-wp-redirect-lite\n"
+"POT-Creation-Date: 2019-07-18 17:55+0500\n"
+"PO-Revision-Date: 2019-07-18 17:55+0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: esc_html_e;esc_html__;esc_attr__;esc_attr_e;__;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: includes/classes/class-xsawr-init.php:21
+#: includes/classes/class-xsawr-init.php:22 views/xsawr-setting-page.php:22
+msgid "Advance WP Redirect"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:134
+msgid "Request URL Already Exist"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:137
+msgid "Added Redirect Successfully"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:142
+msgid "Updated Redirect Successfully"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:145
+msgid "Please Enter Target URL"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:148
+msgid "Please Enter Both Log URL"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:151
+msgid "Please Enter Both Target URL"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:182
+#: includes/classes/class-xsawr-init.php:676 views/xsawr-easy-redirect.php:234
+#: views/xsawr-groups.php:58
+msgid "Edit"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:183
+#: includes/classes/class-xsawr-init.php:678 views/xsawr-easy-redirect.php:236
+#: views/xsawr-easy-redirect.php:247 views/xsawr-groups.php:60
+#: views/xsawr-groups.php:71 views/xsawr-setting-page.php:213
+msgid "Delete"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:209
+msgid "Deleted Redirect Successfully"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:215
+msgid "Group Cannot Deleted"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:227
+msgid "Deleted Group Successfully"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:250 views/xsawr-easy-redirect.php:22
+msgid "Make this url No Follow"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:253
+#: includes/classes/class-xsawr-init.php:261
+#: includes/classes/class-xsawr-init.php:526
+#: includes/classes/class-xsawr-init.php:533
+msgid "checked"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:258 views/xsawr-easy-redirect.php:30
+msgid "Open this URL in new Tab"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:268 views/xsawr-easy-redirect.php:40
+msgid "Request URL"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:276 views/xsawr-easy-redirect.php:48
+msgid "Query Parameters"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:280
+#: includes/classes/class-xsawr-init.php:283
+#: includes/classes/class-xsawr-init.php:286
+#: includes/classes/class-xsawr-init.php:301
+#: includes/classes/class-xsawr-init.php:322
+#: includes/classes/class-xsawr-init.php:325
+#: includes/classes/class-xsawr-init.php:328
+#: includes/classes/class-xsawr-init.php:331
+#: includes/classes/class-xsawr-init.php:343
+#: includes/classes/class-xsawr-init.php:346
+#: includes/classes/class-xsawr-init.php:349
+#: includes/classes/class-xsawr-init.php:352
+#: includes/classes/class-xsawr-init.php:355
+#: includes/classes/class-xsawr-init.php:371
+#: includes/classes/class-xsawr-init.php:374
+#: includes/classes/class-xsawr-init.php:377
+#: includes/classes/class-xsawr-init.php:380
+#: includes/classes/class-xsawr-init.php:383
+#: includes/classes/class-xsawr-init.php:386
+#: includes/classes/class-xsawr-init.php:390
+#: includes/classes/class-xsawr-init.php:393
+#: includes/classes/class-xsawr-init.php:396
+#: includes/classes/class-xsawr-init.php:399
+#: includes/classes/class-xsawr-init.php:402 views/xsawr-easy-redirect.php:53
+#: views/xsawr-easy-redirect.php:56 views/xsawr-easy-redirect.php:59
+#: views/xsawr-setting-page.php:178 views/xsawr-setting-page.php:181
+#: views/xsawr-setting-page.php:184
+msgid "selected"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:281 views/xsawr-easy-redirect.php:54
+#: views/xsawr-setting-page.php:179
+msgid "Exact Match"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:284 views/xsawr-easy-redirect.php:57
+#: views/xsawr-setting-page.php:182
+msgid "Ignore all query parameters"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:287 views/xsawr-easy-redirect.php:60
+#: views/xsawr-setting-page.php:185
+msgid "Ignore and pass all query parameters"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:296 views/xsawr-easy-redirect.php:69
+#: views/xsawr-groups.php:10 views/xsawr-setting-page.php:31
+#: views/xsawr-setting-page.php:32
+msgid "Groups"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:308 views/xsawr-easy-redirect.php:81
+msgid "Title"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:318 views/xsawr-easy-redirect.php:91
+msgid "Match"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:323 views/xsawr-easy-redirect.php:96
+msgid "URL Only"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:326 views/xsawr-easy-redirect.php:99
+msgid "URL and login status"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:329 views/xsawr-easy-redirect.php:102
+msgid "URL and Role"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:332 views/xsawr-easy-redirect.php:105
+msgid "URL and IP"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:339
+#: includes/functions/xsawr-functions.php:152
+#: includes/functions/xsawr-functions.php:170 views/xsawr-easy-redirect.php:112
+msgid "Matched"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:344 views/xsawr-easy-redirect.php:117
+msgid "Redirect to URL"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:347 views/xsawr-easy-redirect.php:120
+msgid "Redirect to Random Post"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:350 views/xsawr-easy-redirect.php:123
+msgid "Pass-Through"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:353 views/xsawr-easy-redirect.php:126
+msgid "Error 404"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:356 views/xsawr-easy-redirect.php:129
+msgid "Do Nothing(ignore)"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:366 views/xsawr-easy-redirect.php:138
+msgid "HTTP code"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:372 views/xsawr-easy-redirect.php:143
+msgid "301 - Moved Permanently "
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:375 views/xsawr-easy-redirect.php:146
+msgid "302 - Found"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:378 views/xsawr-easy-redirect.php:149
+msgid "303 - See Other"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:381 views/xsawr-easy-redirect.php:152
+msgid "304 - Not Modified"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:384 views/xsawr-easy-redirect.php:155
+msgid "307 - Redirect Temporary"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:387 views/xsawr-easy-redirect.php:158
+msgid "308 - Redirect Permanent"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:391
+msgid "400 -  Bad  request"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:394
+msgid "401 - Unauthorized"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:397
+msgid "403 - Forbidden"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:400
+msgid "404 - Not found"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:403
+msgid "410 - Gone"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:440
+msgid "Update"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:443
+#: includes/classes/class-xsawr-init.php:704
+msgid "Cancel"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:486
+#: includes/classes/class-xsawr-init.php:497
+#: includes/classes/class-xsawr-init.php:506
+msgid "Redirect"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:527
+msgid " Open in new tab"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:528
+msgid "This post open in new tab"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:535
+msgid " Make this post rel=no follow."
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:537
+msgid "Search engines not follow this post"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:543
+msgid "Redirect / Destination URL:"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:546
+msgid ""
+"i.e.,http://example.com  . Use FULL URL including http:// for all external "
+"and meta redirects."
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:647
+msgid "Updated Group Successfully"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:651
+msgid "Added Group Successfully"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:656
+msgid "Name Already Exist"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:660
+msgid "Please Enter the Group Name"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:671 views/xsawr-groups.php:52
+msgid "Read"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:696 views/xsawr-groups.php:17
+#: views/xsawr-groups.php:20
+msgid "Add New Group"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:703
+msgid "Save"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:754
+msgid "All Settings Deleted Successfully"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:756
+msgid "Some Settings Cannot Deleted"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:767
+msgid "All Redirects Deleted Successfully"
+msgstr ""
+
+#: includes/classes/class-xsawr-init.php:769
+msgid "All Redirects Cannot Deleted"
+msgstr ""
+
+#: includes/functions/xsawr-functions.php:129
+msgid "Log In"
+msgstr ""
+
+#: includes/functions/xsawr-functions.php:130
+msgid "Log out"
+msgstr ""
+
+#: includes/functions/xsawr-functions.php:131
+msgid "Target URL you want to redirect if log in"
+msgstr ""
+
+#: includes/functions/xsawr-functions.php:133
+msgid "Target URL you want to redirect if log out"
+msgstr ""
+
+#: includes/functions/xsawr-functions.php:139
+msgid "Role"
+msgstr ""
+
+#: includes/functions/xsawr-functions.php:153
+#: includes/functions/xsawr-functions.php:171
+msgid "Unmatched"
+msgstr ""
+
+#: includes/functions/xsawr-functions.php:154
+#: includes/functions/xsawr-functions.php:172
+#: includes/functions/xsawr-functions.php:185 views/xsawr-easy-redirect.php:168
+msgid "Target URL you want to redirect if matched"
+msgstr ""
+
+#: includes/functions/xsawr-functions.php:155
+#: includes/functions/xsawr-functions.php:173
+msgid "Target URL you want to redirect if unmatched"
+msgstr ""
+
+#: includes/functions/xsawr-functions.php:167
+msgid "IP Address"
+msgstr ""
+
+#: includes/functions/xsawr-functions.php:184 views/xsawr-easy-redirect.php:165
+msgid "Target URL"
+msgstr ""
+
+#: views/xsawr-easy-redirect.php:18
+msgid "Add New Redirects"
+msgstr ""
+
+#: views/xsawr-easy-redirect.php:21
+msgid "Add attribute in source url rel=\"nofollow\""
+msgstr ""
+
+#: views/xsawr-easy-redirect.php:29
+msgid "Add attribute in source url Target=\"_blank\""
+msgstr ""
+
+#: views/xsawr-easy-redirect.php:43
+msgid "Enter request URL you want to redirect"
+msgstr ""
+
+#: views/xsawr-easy-redirect.php:84
+msgid "(optional) Description  of this redirect"
+msgstr ""
+
+#: views/xsawr-easy-redirect.php:187
+msgid "Add New Redirect"
+msgstr ""
+
+#: views/xsawr-easy-redirect.php:191
+msgid "Existing Redirects"
+msgstr ""
+
+#: views/xsawr-easy-redirect.php:197
+msgid "URL"
+msgstr ""
+
+#: views/xsawr-easy-redirect.php:200
+msgid "Type"
+msgstr ""
+
+#: views/xsawr-easy-redirect.php:203 views/xsawr-groups.php:35
+msgid "Actions"
+msgstr ""
+
+#: views/xsawr-easy-redirect.php:250 views/xsawr-groups.php:74
+#: views/xsawr-setting-page.php:216
+msgid "Do you really want to delete?"
+msgstr ""
+
+#: views/xsawr-easy-redirect.php:254 views/xsawr-groups.php:78
+#: views/xsawr-setting-page.php:220
+msgid "Yes"
+msgstr ""
+
+#: views/xsawr-easy-redirect.php:255 views/xsawr-groups.php:79
+#: views/xsawr-setting-page.php:221
+msgid "No"
+msgstr ""
+
+#: views/xsawr-groups.php:13
+msgid "Add Group"
+msgstr ""
+
+#: views/xsawr-groups.php:24
+msgid "Existing Groups"
+msgstr ""
+
+#: views/xsawr-groups.php:29
+msgid "Name"
+msgstr ""
+
+#: views/xsawr-groups.php:32
+msgid "Redirects"
+msgstr ""
+
+#: views/xsawr-setting-page.php:28
+msgid "is-active"
+msgstr ""
+
+#: views/xsawr-setting-page.php:29
+msgid "Easy Redirect"
+msgstr ""
+
+#: views/xsawr-setting-page.php:34 views/xsawr-setting-page.php:35
+#: views/xsawr-setting-page.php:48
+msgid "Options"
+msgstr ""
+
+#: views/xsawr-setting-page.php:55
+msgid "Basic Options"
+msgstr ""
+
+#: views/xsawr-setting-page.php:58
+msgid "Custom Post Types"
+msgstr ""
+
+#: views/xsawr-setting-page.php:67
+msgid "Show Redirect Column"
+msgstr ""
+
+#: views/xsawr-setting-page.php:79
+msgid "Hidden the Metabox in Following Post Types"
+msgstr ""
+
+#: views/xsawr-setting-page.php:98
+msgid "Master Override Options"
+msgstr ""
+
+#: views/xsawr-setting-page.php:102
+msgid "Off the all redirects"
+msgstr ""
+
+#: views/xsawr-setting-page.php:103
+msgid "Turn OFF All Redirects"
+msgstr ""
+
+#: views/xsawr-setting-page.php:112
+msgid "All 404 page move to homepage"
+msgstr ""
+
+#: views/xsawr-setting-page.php:113
+msgid "All 404 Error Redirects To Homepage"
+msgstr ""
+
+#: views/xsawr-setting-page.php:124
+msgid "Add attribute in source url rel=\"_nofollow\""
+msgstr ""
+
+#: views/xsawr-setting-page.php:125
+msgid "Make All Redirects Have (rel='nofollow')"
+msgstr ""
+
+#: views/xsawr-setting-page.php:135
+msgid "Add attribute in source url target=\"_blank\""
+msgstr ""
+
+#: views/xsawr-setting-page.php:136
+msgid "Make All Redirects Have New Window"
+msgstr ""
+
+#: views/xsawr-setting-page.php:147
+msgid "i.e /abcd/ will  matach /Abcd"
+msgstr ""
+
+#: views/xsawr-setting-page.php:148
+msgid "Make All Redirects Case Insensitive"
+msgstr ""
+
+#: views/xsawr-setting-page.php:157
+msgid "All Redirect move to this URL"
+msgstr ""
+
+#: views/xsawr-setting-page.php:158
+msgid "Make All Redirects GOTO This URL"
+msgstr ""
+
+#: views/xsawr-setting-page.php:171
+msgid "Applies to all redirects unless you configure them otherwise"
+msgstr ""
+
+#: views/xsawr-setting-page.php:172
+msgid "Default Query Matching"
+msgstr ""
+
+#: views/xsawr-setting-page.php:192
+msgid ""
+"Exact - matches the query parameters exactly defined in your source, in any "
+"order"
+msgstr ""
+
+#: views/xsawr-setting-page.php:193
+msgid "Ignore - as exact, but ignores any query parameters not in your source"
+msgstr ""
+
+#: views/xsawr-setting-page.php:194
+msgid "Pass - as ignore, but also copies the query parameters to the target"
+msgstr ""
+
+#: views/xsawr-setting-page.php:200
+msgid "Clean Up Options"
+msgstr ""
+
+#: views/xsawr-setting-page.php:204
+msgid "Delete All Easy Redirect"
+msgstr ""
+
+#: views/xsawr-setting-page.php:209
+msgid "Delete All Redirects and Settings From Database"
+msgstr ""

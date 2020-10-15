@@ -1,0 +1,217 @@
+.xsawrlite-tabs{
+    -webkit-justify-content: left !important;
+}
+.xsawrlite-set{
+    width: 0px !important;
+}
+.xsawrlite .mdl-tabs.is-upgraded .mdl-tabs__tab.is-active:after{
+    background-color:#43b02b; 
+}
+.xsawrlite .mdl-tabs a:focus{
+    box-shadow: 0 0 0 1px #43b02b;
+}
+.xsawrlite .mdl-tabs input:focus{
+    box-shadow: 0 0 0 1px #43b02b;
+    border-color: #43b02b;
+}
+.xsawrlite .section__block{
+    background-color: white;
+}
+.xsawrlite .mdl-checkbox input:checked{
+    background-color:#8bc34a; 
+}
+.xsawrlite .mdl-checkbox input:checked::before{
+  color:#fff;
+}
+.xsawrlite-table{
+    width:95%;
+}
+
+.xsawrlite-button{
+    padding: 8px 0px !important;
+}
+.xsawrlite-del, .xsawrlite-edit,.xsawrlite-save,.xsawrlite-cancel ,#xsawrlite_redirect i{
+    cursor: pointer;
+}
+.xsawrlite-del:hover, .xsawrlite-cancel:hover{
+  color:red;
+}
+.xsawrlite-edit:hover,.xsawrlite-save:hover{
+    color:blue;
+}
+.tooltip-icon .tooltip{
+   visibility: hidden;
+   background-color: #ffffff;
+   border:1px solid #8bc34a;
+   padding: 1%;
+   opacity: 0;
+   transition: opacity 0.3s;
+   box-shadow: 0 0 4px 0 #8bc34a;
+
+}
+
+.tooltip-icon:hover .tooltip{
+    visibility: visible;
+    opacity: 1;
+}
+
+#xsawrlite-snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#xsawrlite-snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+#xsawrlite-overlay{
+    position: absolute;
+    display: none; 
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: unset;
+    background-color: rgba(0,0,0,0.1);
+    z-index: 999;
+    cursor: pointer;
+}
+.xsawrlite-loader {
+    display: inline-block;
+    position: fixed;
+    margin-top: 10%;
+    border: 10px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 10px solid #8bc34a;
+    width: 64px;
+    height: 64px;
+    -webkit-animation: spin 1s linear infinite; /* Safari */
+    animation: spin 1s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.xsawrlite-loader-warp{
+    width:100%;
+    text-align: center;
+    margin: auto;
+}
+.xsawrlite-save,.xsawrlite-cancel{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    line-height: 1;
+    padding: 1px;
+    font-style: normal;
+    text-align: center;
+}
+.xsawrlite-group{
+    background-color: #fff !important;
+}
+.xsawrlite-read{
+    font-size: 16px;
+}
+.xsawrlite-read i{
+    padding-top: 4px;
+}
+.xsawrlite_p {
+    cursor: pointer;
+    margin:0px !important;
+    min-width: 180px;
+}
+#xsawrlite_redirect{
+    width:95%;
+}
+.xsawrlite-col{
+    display:flex;
+    margin: 0px 8px;
+}
+.xsawrlite-col-2{
+    margin: 0px 8px !important;
+}
+.xsawrlite_p-2 {
+    cursor: pointer;
+    margin:0px !important;
+    min-width: 180px;
+    
+}
+.xsawrlite-input{
+    margin: -15px 0px !important;
+}
+.xsawrlite a {
+    color: #444;
+    /* font-weight: 500; */
+    text-decoration: none;
+}
+
+@media(min-width: 768px){
+    .xsawrlite-col-2{
+        display:flex;
+    }
+    .xsawrlite_p-2{
+        padding: 9px 0px !important;
+    }   
+}
+#xsawrlite-save{
+    margin-right: 10px;
+}
+::placeholder { /* Firefox, Chrome, Opera */ 
+    color: rgba(0,0,0,.26); 
+} 
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+    color: rgba(0,0,0,.26); 
+} 
+  
+::-ms-input-placeholder { /* Microsoft Edge */ 
+    color: rgba(0,0,0,.26); 
+}
+.xsawrlite-pro{
+    color:#2fbb1c;
+    font-weight: inherit;
+    font-size: 14px;
+    margin: 0px !important;
+}
