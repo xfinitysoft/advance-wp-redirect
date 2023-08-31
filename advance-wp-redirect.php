@@ -1,11 +1,13 @@
 <?php
 /**
- * Plugin Name: Post Redirection - Redirect Manager 
- * Plugin URI:http://products.xfinitysoft.com/xfinity/advance-wp-redirect/
+ * Plugin Name: WP Post Redirection
+ * Plugin URI::https://xfinitysoft.com/xfinity/advance-wp-redirect/
  * Description:  Redirect Pages, Posts or Custom Post Types to another location quickly (for internal or external URLs). Includes individual non-existant 301 Redirects , New Window functionality, and rel=nofollow functionality.
- * Version: 0.0.1
+ * Version: 0.0.5
+ * Requires at least:   4.4.0
+ * Tested up to: 6.2.0
  * Author:Xfinity Soft
- * Author URI:http://products.xfinitysoft.com/xfinity/
+ * Author URI:https://xfinitysoft.com/
  * Text Domain:xsawrlite-domain
  * Domain Path: /languages
 */

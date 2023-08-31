@@ -16,7 +16,7 @@ class XSAWRLITE_Init {
 	* @param NULL
 	* @return NULLF
 	*/
-	public static function xsawrlite_admin_menu() {
+	public function xsawrlite_admin_menu() {
 		add_menu_page( 
 			esc_html__( 'Advance WP Redirect' , XSAWRLITE_DOMAIN ) , 
 			esc_html__( 'Advance WP Redirect' , XSAWRLITE_DOMAIN ), 
@@ -26,6 +26,14 @@ class XSAWRLITE_Init {
 			'dashicons-external',
 			40
 		);
+		add_submenu_page( 
+			'xsawrlite_page',
+			esc_html__( 'Support' , 'xsawrlite-domain' ), 
+			esc_html__( 'Support' , 'xsawrlite-domain'  ), 
+			'manage_options',
+			'xsawrlite_support',
+			'xsawrlite_support',
+		);
 	}
 
 	/**
@@ -33,9 +41,9 @@ class XSAWRLITE_Init {
 	* @param NULL
 	* @return NULL
 	*/
-	public static function xsawrlite_load_css_js(){
+	public function xsawrlite_load_css_js(){
 		
-		if(isset($_GET['page']) && $_GET['page'] == 'xsawrlite_page'){
+		if(isset($_GET['page']) && ($_GET['page'] == 'xsawrlite_page' || $_GET['page'] == 'xsawrlite_support')){
 			wp_register_style( 'material' , plugins_url( "advance-wp-redirect/assets/css/xsawrlite.material.min.css" ) ) ;
 			wp_register_style( 'xsawrlite-custom' , plugins_url( "advance-wp-redirect/assets/css/xsawrlite.custom.css" ) ) ;
 			wp_register_script( 'material' , plugins_url( "advance-wp-redirect/assets/js/xsawrlite.material.min.js" ) ) ;
@@ -55,7 +63,7 @@ class XSAWRLITE_Init {
 	* for fornt end url js
 	*
 	*/
-	public static function xsawrlite_forntend_load_js(){
+	public function xsawrlite_forntend_load_js(){
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'xsawrlite-frontend' , plugins_url( "advance-wp-redirect/assets/js/xsawrlite.frontend.js" ) );
 		wp_localize_script( 'xsawrlite-frontend', 'frontend_ajax',
@@ -69,7 +77,7 @@ class XSAWRLITE_Init {
     * Load the text domain
     *
     */
-    public static function xsawrlite_load_textdomain() {
+    public function xsawrlite_load_textdomain() {
         load_plugin_textdomain( 'xsawrlite-domain' , false , dirname( XSAWRLITE_BASENAME ) . '/languages' );
     }
 	/**
@@ -77,7 +85,7 @@ class XSAWRLITE_Init {
 	* @param NULL
 	* @return NULL
 	*/
-	public static function xsawrlite_register_settings(){
+	public function xsawrlite_register_settings(){
 		register_setting( 'xsawrlite_options' , 'xsawrlite-masteroptions' );
 	}
 
@@ -86,16 +94,19 @@ class XSAWRLITE_Init {
 	* @param NULL
 	* @return json array
 	*/
-	public static function xsawrlite_add_redirects(){
+	public function xsawrlite_add_redirects(){
+		
 		$redirects = array();
 		$datajson = array();
-		$redirects = get_option('xsawrlite_easy_redirect');
+		$redirects = get_option('xsawrlite_easy_redirect',array());
+		
 		if(empty($redirects)){
 			$index = 0;
 		}else{
 			end($redirects);
 			$index = key($redirects);
 		}
+		
 		$xsawrlite_redirect = array();
 		parse_str( $_POST["redirect_data"] , $xsawrlite_redirect );
 		$http = $_SERVER["HTTP_ORIGIN"];
@@ -177,7 +188,7 @@ class XSAWRLITE_Init {
 	* @param NULL
 	* @return NULL
 	*/
-	public static function xsawrlite_del(){
+	public function xsawrlite_del(){
 		$data = array();
 		if(isset($_POST["redirect_id"])){
 			$data = get_option('xsawrlite_easy_redirect');
@@ -193,7 +204,7 @@ class XSAWRLITE_Init {
 	* Edit the redirects by ajax call
 	*
 	*/
-	public static function xsawrlite_edit_redirects(){
+	public function xsawrlite_edit_redirects(){
 		$id = sanitize_text_field($_POST['redirect_id']);
 		$check = '';
 		$redirects = get_option('xsawrlite_easy_redirect');
@@ -360,7 +371,7 @@ class XSAWRLITE_Init {
 	* @param NULL
 	* @return NULL
 	*/
-	public static function xsawrlite_get_nf_link(){
+	public function xsawrlite_get_nf_link(){
 		$redirects = array();
 		$master_options = get_option('xsawrlite-masteroptions');
 		if(!isset($master_options['off-redirect'])){
@@ -380,7 +391,7 @@ class XSAWRLITE_Init {
 	* @param NULL
 	* @return NULL
 	*/
-	public static function xsawrlite_redirect_url(){
+	public function xsawrlite_redirect_url(){
 		$master_options = get_option('xsawrlite-masteroptions');
 		if(!isset($master_options['off-redirect'])){
 			$current_url = $_SERVER["REQUEST_URI"];
@@ -414,7 +425,7 @@ class XSAWRLITE_Init {
 	* @param NULL
 	* @return NULL
 	*/
-	public static function xsawrlite_redirect_url_404(){
+	public function xsawrlite_redirect_url_404(){
 		$master_options = get_option('xsawrlite-masteroptions');
 		if(!isset($master_options['off-redirect'])){
 			if(is_404()){
@@ -425,6 +436,56 @@ class XSAWRLITE_Init {
 			}
 		}
 
+	}
+
+	public function xsawrlite_send_mail(){
+				$data = array();
+        parse_str($_POST['data'], $data);
+        $data['plugin_name'] = 'WP Post Redirection';
+        $data['version'] = 'lite';
+        $data['website'] = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://".$_SERVER['HTTP_HOST'];
+        $to = 'xfinitysoft@gmail.com';
+        switch ($data['type']) {
+        	case 'report':
+        		$subject = 'Report a bug';
+        		break;
+        	case 'hire':
+        		$subject = 'Hire us to customize/develope Plugin/Theme or WordPress projects';
+        		break;
+        	
+        	default:
+        		$subject = 'Request a Feature';
+        		break;
+        }
+		
+		$body = '<html><body><table>';
+		$body .='<tbody>';
+		$body .='<tr><th>User Name</th><td>'.$data['xsawrlite_name'].'</td></tr>';
+		$body .='<tr><th>User email</th><td>'.$data['xsawrlite_email'].'</td></tr>';
+		$body .='<tr><th>Plugin Name</th><td>'.$data['plugin_name'].'</td></tr>';
+		$body .='<tr><th>Version</th><td>'.$data['version'].'</td></tr>';
+		$body .='<tr><th>Website</th><td><a href="'.$data['website'].'">'.$data['website'].'</a></td></tr>';
+		$body .='<tr><th>Message</th><td>'.$data['xsawrlite_message'].'</td></tr>';
+		$body .='</tbody>';
+		$body .='</table></body></html>';
+		$headers = array('Content-Type: text/html; charset=UTF-8');
+		$params ="name=".$data['xsawrlite_name'];
+		$params.="&email=".$data['xsawrlite_email'];
+		$params.="&site=".$data['website'];
+		$params.="&version=".$data['version'];
+		$params.="&plugin_name=".$data['plugin_name'];
+		$params.="&type=".$data['type'];
+		$params.="&message=".$data['xsawrlite_message'];
+		$sever_response = wp_remote_post("https://xfinitysoft.com/wp-json/plugin/v1/quote/save/?".$params);
+        $se_api_response = json_decode( wp_remote_retrieve_body( $sever_response ), true );
+		
+		if($se_api_response['status']){
+			$mail = wp_mail( $to, $subject, $body, $headers );
+			wp_send_json(array('status'=>true));
+		}else{
+			wp_send_json(array('status'=>false));
+		}
+		wp_die();
 	}
 }
 ?>

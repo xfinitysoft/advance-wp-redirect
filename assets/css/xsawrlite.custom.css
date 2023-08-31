@@ -213,5 +213,52 @@
     color:#2fbb1c;
     font-weight: inherit;
     font-size: 14px;
-    margin: 0px !important;
+}
+.xsawrlite-pro-link{
+    text-decoration: none;
+}
+.xsawrlite-col-button {
+    width:380px;
+    float: left;
+    
+}
+.xsawrlite-button-main{
+    display: inline-block;
+    width: 160px
+}
+.xsawrlite-button-main p.submit{
+    margin: 0px;
+    padding-bottom: 0px;
+}
+#xsawrlite_name,#xsawrlite_email{
+    width: 335px;
+}
+.xs-send-email-notice{
+  display: none;
+}
+.xs-notice-dismiss{
+  display:none;
+}
+.xsawrlite-send-mail{
+    font-size: 15px !important;
+    font-family: bold;
+    padding: 2px 15px !important;
+}
+
+.xs_is_active{
+    display:inline-block;
+    visibility:visible;
+    opacity:1
+}
+.xs-top-margin{
+    margin-top: 20px !important; 
+}
+.xs-mail-spinner{
+    margin-top: 38px ;
+}
+.error{
+    outline: 1px solid red;
+}
+.input-group{
+    display: inline-flex;
 }

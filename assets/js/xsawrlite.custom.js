@@ -116,4 +116,100 @@ jQuery(document).ready(function($) {
             
         });           
     });
+    $('#xsawrlite_name , #xsawrlite_email , #xsawrlite_message').on('change',function(e){
+        if(!$(this).val()){
+            $(this).addClass("error");
+        }else{
+            $(this).removeClass("error");
+        }
+    });
+    $('.xsawrlite_support_form').on('submit' , function(e){ 
+        e.preventDefault();
+        jQuery('.xs-send-email-notice').hide();
+        jQuery('.xs-mail-spinner').addClass('xs_is_active');
+        jQuery('#xsawrlite_name').removeClass("error");
+        jQuery('#xsawrlite_email').removeClass("error");
+        jQuery('#xsawrlite_message').removeClass("error");
+        $.ajax({ 
+            url:ajaxurl,
+            type:'post',
+            data:{'action':'xsawrlite_send_mail','data':$(this).serialize()},
+            beforeSend: function(){
+                if(!jQuery('#xsawrlite_name').val()){
+                    jQuery('#xsawrlite_name').addClass("error");
+                    jQuery('.xs-send-email-notice').removeClass('notice-success');
+                    jQuery('.xs-send-email-notice').addClass('notice');
+                    jQuery('.xs-send-email-notice').addClass('error');
+                    jQuery('.xs-send-email-notice').addClass('is-dismissible');
+                    jQuery('.xs-send-email-notice p').html('Please fill all the fields');
+                    jQuery('.xs-send-email-notice').show();
+                    jQuery('.xs-notice-dismiss').show();
+                    window.scrollTo(0,0);
+                    jQuery('.xs-mail-spinner').removeClass('xs_is_active');
+                    return false;
+                }
+                 if(!jQuery('#xsawrlite_email').val()){
+                    jQuery('#xsawrlite_email').addClass("error");
+                    jQuery('.xs-send-email-notice').removeClass('notice-success');
+                    jQuery('.xs-send-email-notice').addClass('notice');
+                    jQuery('.xs-send-email-notice').addClass('error');
+                    jQuery('.xs-send-email-notice').addClass('is-dismissible');
+                    jQuery('.xs-send-email-notice p').html('Please fill all the fields');
+                    jQuery('.xs-send-email-notice').show();
+                    jQuery('.xs-notice-dismiss').show();
+                    window.scrollTo(0,0);
+                    jQuery('.xs-mail-spinner').removeClass('xs_is_active');
+                    return false;
+                }
+                 if(!jQuery('#xsawrlite_message').val()){
+                    jQuery('#xsawrlite_message').addClass("error");
+                    jQuery('.xs-send-email-notice').removeClass('notice-success');
+                    jQuery('.xs-send-email-notice').addClass('notice');
+                    jQuery('.xs-send-email-notice').addClass('error');
+                    jQuery('.xs-send-email-notice').addClass('is-dismissible');
+                    jQuery('.xs-send-email-notice p').html('Please fill all the fields');
+                    jQuery('.xs-send-email-notice').show();
+                    jQuery('.xs-notice-dismiss').show();
+                    window.scrollTo(0,0);
+                    jQuery('.xs-mail-spinner').removeClass('xs_is_active');
+                    return false;
+                }
+                jQuery(".xsawrlite_support_form :input").prop("disabled", true);
+                jQuery("#xsawrlite_message").prop("disabled", true);
+                jQuery('.xsawrlite-send-mail').prop('disabled',true);
+            },
+            success: function(res){
+                jQuery('.xs-send-email-notice').find('.xs-notice-dismiss').show();
+                jQuery('.xsawrlite-send-mail').prop('disabled',false);
+                jQuery(".xsawrlite_support_form :input").prop("disabled", false);
+                jQuery("#xsawrlite_message").prop("disabled", false);
+                if(res.status == true){
+                    jQuery('.xs-send-email-notice').removeClass('error');
+                    jQuery('.xs-send-email-notice').addClass('notice');
+                    jQuery('.xs-send-email-notice').addClass('notice-success');
+                    jQuery('.xs-send-email-notice').addClass('is-dismissible');
+                    jQuery('.xs-send-email-notice p').html('Successfully sent');
+                    jQuery('.xs-send-email-notice').show();
+                    jQuery('.xs-notice-dismiss').show();
+                    jQuery('.xsawrlite_support_form')[0].reset();
+                }else{
+                    jQuery('.xs-send-email-notice').removeClass('notice-success');
+                    jQuery('.xs-send-email-notice').addClass('notice');
+                    jQuery('.xs-send-email-notice').addClass('error');
+                    jQuery('.xs-send-email-notice').addClass('is-dismissible');
+                    jQuery('.xs-send-email-notice p').html('Sent Failed');
+                    jQuery('.xs-send-email-notice').show();
+                    jQuery('.xs-notice-dismiss').show();
+                }
+                jQuery('.xs-mail-spinner').removeClass('xs_is_active');
+            }
+
+        });
+    });
+    $('.xs-notice-dismiss').on('click',function(e){
+        e.preventDefault();
+        $(this).parent().hide();
+        $(this).hide();
+    });
+
 });

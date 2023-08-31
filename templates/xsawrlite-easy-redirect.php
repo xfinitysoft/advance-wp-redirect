@@ -48,13 +48,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<div class="mdl-textfield mdl-js-textfield getmdl-select xsawrlite-input">
 						<?php $master_options = get_option("xsawrlite-masteroptions"); ?> 
 				       <select class="mdl-textfield__input" name="xsawrlite_easy_redirect[qp]">
-							<option  <?php esc_attr_e( ( $master_options['mq_redirect'] == 'exact')? "selected":"" );?> value="exact">
+							<option  <?php esc_attr_e( (isset($master_options['mq_redirect']) && $master_options['mq_redirect'] == 'exact')? "selected":"" );?> value="exact">
 								<?php esc_html_e( "Exact Match" , XSAWRLITE_DOMAIN ); ?>
 							</option>
-							<option <?php esc_attr_e( ( $master_options['mq_redirect'] == 'ignore')? "selected":"" ); ?> disabled value="ignore">
+							<option <?php esc_attr_e( ( isset($master_options['mq_redirect']) && $master_options['mq_redirect'] == 'ignore')? "selected":"" ); ?> disabled value="ignore">
 								<?php esc_html_e( "Ignore all query parameters(pro version)" , XSAWRLITE_DOMAIN ); ?>
 							</option>
-							<option <?php esc_attr_e( ( $master_options['mq_redirect'] == 'ignore-and-pass')? "selected":"" ); ?> disabled value="ignore-and-pass">
+							<option <?php esc_attr_e( (isset($master_options['mq_redirect']) && $master_options['mq_redirect'] == 'ignore-and-pass')? "selected":"" ); ?> disabled value="ignore-and-pass">
 								<?php esc_html_e( "Ignore and pass all query parameters(pro version)" , XSAWRLITE_DOMAIN ); ?>
 							</option>
 						</select> 

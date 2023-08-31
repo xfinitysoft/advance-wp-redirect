@@ -37,8 +37,8 @@ class XSAWRLITE_Main {
     */
     public function __construct() {
         $this->xsawrlite_define_constants();
-        $this->xsawrlite_init_hooks();
 		$this->xsawrlite_includes();
+        $this->xsawrlite_init_hooks();
     }
 
     /**
@@ -55,19 +55,21 @@ class XSAWRLITE_Main {
     *
     */
     function xsawrlite_init_hooks() {
-        add_action( 'init' , array( 'XSAWRLITE_Init' , 'xsawrlite_load_textdomain') );
-    	add_action( 'admin_menu' , array( 'XSAWRLITE_Init' , 'xsawrlite_admin_menu') );
+        $xsawrlite = new XSAWRLITE_Init();
+        add_action( 'init' , array($xsawrlite , 'xsawrlite_load_textdomain') );
+    	add_action( 'admin_menu' , array( $xsawrlite, 'xsawrlite_admin_menu') );
     	add_filter( 'plugin_action_links_' . XSAWRLITE_BASENAME , 'xsawrlite_plugin_link');
-    	add_action( 'admin_enqueue_scripts' , array( 'XSAWRLITE_Init' , 'xsawrlite_load_css_js' ) );
-        add_action( 'wp_enqueue_scripts' , array( 'XSAWRLITE_Init' , 'xsawrlite_forntend_load_js' ) );
-        add_action( 'wp_ajax_nopriv_xsawrlite_get_nf_link' , array( 'XSAWRLITE_Init' , 'xsawrlite_get_nf_link' ) );
-    	add_action( 'admin_init' , array( 'XSAWRLITE_Init' , 'xsawrlite_register_settings') );
-        add_action( 'wp_ajax_xsawrlite_add_redirects' , array( 'XSAWRLITE_Init' , 'xsawrlite_add_redirects' ) );
-        add_action( 'wp_ajax_xsawrlite_del' , array( 'XSAWRLITE_Init' , 'xsawrlite_del' ) );
-        add_action( 'wp_ajax_xsawrlite_edit_redirects' , array( 'XSAWRLITE_Init' , 'xsawrlite_edit_redirects' ) );
-        add_action( 'wp_ajax_xsawrlite_get_nf_link' , array( 'XSAWRLITE_Init' , 'xsawrlite_get_nf_link' ) );
-        add_action( 'init' , array('XSAWRLITE_Init' , 'xsawrlite_redirect_url') );
-        add_action( 'wp' , array('XSAWRLITE_Init' , 'xsawrlite_redirect_url_404') );
+    	add_action( 'admin_enqueue_scripts' , array( $xsawrlite , 'xsawrlite_load_css_js' ) );
+        add_action( 'wp_enqueue_scripts' , array( $xsawrlite, 'xsawrlite_forntend_load_js' ) );
+        add_action( 'wp_ajax_nopriv_xsawrlite_get_nf_link' , array( $xsawrlite, 'xsawrlite_get_nf_link' ) );
+    	add_action( 'admin_init' , array( $xsawrlite , 'xsawrlite_register_settings') );
+        add_action( 'wp_ajax_xsawrlite_add_redirects' , array( $xsawrlite , 'xsawrlite_add_redirects' ) );
+        add_action( 'wp_ajax_xsawrlite_del' , array( $xsawrlite , 'xsawrlite_del' ) );
+        add_action( 'wp_ajax_xsawrlite_edit_redirects' , array( $xsawrlite , 'xsawrlite_edit_redirects' ) );
+        add_action( 'wp_ajax_xsawrlite_get_nf_link' , array($xsawrlite, 'xsawrlite_get_nf_link' ) );
+        add_action( 'wp_ajax_xsawrlite_send_mail', array($xsawrlite,'xsawrlite_send_mail'));
+        add_action( 'init' , array($xsawrlite , 'xsawrlite_redirect_url') );
+        add_action( 'wp' , array($xsawrlite, 'xsawrlite_redirect_url_404') );
         
     }
 
@@ -78,6 +80,7 @@ class XSAWRLITE_Main {
     	include_once XSAWRLITE_ABSPATH . '/includes/classes/class-xsawrlite-init.php';
     	include_once XSAWRLITE_ABSPATH . '/includes/functions/xsawrlite-functions.php';
     	include_once XSAWRLITE_ABSPATH . '/templates/xsawrlite-setting-page.php';
+        include_once XSAWRLITE_ABSPATH . '/templates/xsawrlite-support.php';
 
     }
     
